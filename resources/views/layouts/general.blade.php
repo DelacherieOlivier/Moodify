@@ -13,7 +13,7 @@
         </head>
         <body>
 
-            <div style="display:none;">
+
             @auth
             <div class="infos_user">
                 <a href="/utilisateur/{{Auth::id()}}" data-pjax><div class="photo_user" style="background-image: url('{{$utilisateur->url_avatar ?? ''}}')"></div></a>
@@ -37,19 +37,12 @@
                 </div>
             </div>
 
+            @auth
             <div class="menu2">
                 <a href="/" data-pjax><i class="fas fa-home"></i></a>
-                @auth
-                    <a href="/utilisateur/{{Auth::id()}}" data-pjax><div class="photo_user" style="background-image: url('{{$utilisateur->url_avatar ?? ''}}')"></div></a>
-                    <a href="#" data-pjax><i class="fas fa-music"></i></a>
-                    <a href="#" data-pjax><i class="fas fa-file-audio"></i></a>
-                    <a href="#" data-pjax><i class="fas fa-star"></i></a>
-                @endauth
-                @guest
-                    <a href="connexion" data-pjax><i class="fas fa-user-plus"></i></a>
+                <a href="/utilisateur/{{Auth::id()}}" data-pjax><div class="photo_user" style="background-image: url('{{$utilisateur->url_avatar ?? ''}}')"></div></a>
             </div>
-            @endguest
-
+            @endauth
 
             <script src="/js/jquery.js"></script>
             <script src="/js/jquery.pjax.js"></script>
