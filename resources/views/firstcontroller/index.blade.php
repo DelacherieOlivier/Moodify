@@ -3,7 +3,17 @@
 @section('contenu')
 
     @auth
-        <h3>la page principal</h3>
+        <div class="home-bck"></div>
+<div class="quote">LALALAL</div>
+
+<!-- CALENDRIER -->
+
+
+	  <div class="calendar-grid">
+  
+  </div>
+	
+
     @endauth
     @guest
         @include("firstcontroller.connexion")
