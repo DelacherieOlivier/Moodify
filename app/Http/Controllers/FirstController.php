@@ -6,6 +6,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+
 
 class FirstController extends Controller
 {
@@ -33,6 +35,11 @@ class FirstController extends Controller
 
     public function resetmdp(){
         return view("auth.passwords.reset");
+    }
+
+    public function showLinkRequestForm(){
+        return view('auth.passwords.email');
+        $this->validate($request, ['email' => 'required|email']);
     }
 
     public function utilisateur($id){
@@ -71,7 +78,6 @@ class FirstController extends Controller
 
 
     public function erreur() {
-        $playlists=Playlist::all();
         $user=User::findOrFail(Auth::id());
         return view('errors.404', ["utilisateur"=>$user]);
 

@@ -38,7 +38,7 @@
                 <span class="checkmark"></span>
             </label><br>
             @if (Route::has('password.request'))
-                <a class="lien" href="/resetmdp" data-pjax>
+                <a class="lien" href="/resetmdpemail" data-pjax>
                     {{ __('Mot de passe oublié?') }}
                 </a>
             @endif
