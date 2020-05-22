@@ -28,7 +28,7 @@
                 {{ __('Envoyer') }}
             </button>
         </form>
-        <div class="msg2">Ou <a href="inscription" class="lien" data-pjax>connectez-vous</a> sans attendre !</div>
+        <div class="msg2">Ou <a href="connexion" class="lien" data-pjax>connectez-vous</a> sans attendre !</div>
     </div>
 
 @endsection
