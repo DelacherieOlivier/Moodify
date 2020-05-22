@@ -1,6 +1,6 @@
-@if(request()->ajax())
-    @yield("contenu")
-    @else
+@guest
+        @yield("contenu")
+    @endguest
     <!DOCTYPE html>
     <html>
         <head>
@@ -15,13 +15,14 @@
 
 
             @auth
+            
             <div class="flex">
                <div class="logo-home"></div>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" role="button" data-pjax>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" role="button">
                         <div class="logout"></div>
                     </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;" data-pjax>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
                     </form>
                 </div>
@@ -73,7 +74,7 @@ const displayCalendar = (calendarSettings) => {
   const daysInMonth = calendarSettings.date.endOf('Month').date()
   const firstDay = calendarSettings.date.startOf('Month').isoWeekday()
 
-  calendar.innerHTML = ''
+  calendar.innerHTML = '';
   calendar.innerHTML = `
                         <div class="calendar-nav"><a class="left" onClick="decrementMonth()"></a></div>
                         <div class="calendar-title">${calendarTitle}</div>
@@ -85,7 +86,7 @@ const displayCalendar = (calendarSettings) => {
                         <div class="calendar-dayname">V</div>
                         <div class="calendar-dayname">S</div>
                         <div class="calendar-dayname">D</div>
-                        `
+                        `;
   
   for (let day = 1; day <= daysInMonth; day++) {
     let calendarDay = document.createElement('div')
@@ -94,9 +95,11 @@ const displayCalendar = (calendarSettings) => {
       console.log(`firstDay = ${firstDay}`)
     }
     calendarDay.classList.add('calendar-day')
+    
     if (calendarSettings.today.month() == calendarSettings.date.month() && calendarSettings.today.year() == calendarSettings.date.year()) {
       if (calendarSettings.today.date() == day) {
         calendarDay.classList.add('current-day')
+        calendarDay.setAttribute('onclick',"mood()")
       }
     }
     calendarDay.innerHTML = day
@@ -107,8 +110,10 @@ const displayCalendar = (calendarSettings) => {
 }
 
 displayCalendar(calendarSettings);
+                
+  
 </script>
         </body>
     </html>
-    @endif
+
 

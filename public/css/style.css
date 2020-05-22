@@ -113,7 +113,7 @@ a {
         border-radius: 1rem;
         color: #5B5B5A;
         text-transform: uppercase;
-        width: 55vw;
+        width: 70vw;
         outline: none;
         border: none;
         font-size: 0.7rem;
@@ -121,7 +121,7 @@ a {
         padding: 0.5rem;
         padding-left: 3rem;
         margin-top: 1vh;
-        height: 2vh;
+        height: 4vh;
         animation-name: opacity;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -163,6 +163,22 @@ a {
         opacity: 0;
     }
 
+        .input-submit2 {
+
+        background-image: linear-gradient(to right, #F8F2A5, #F18999);
+        border-radius: 1rem;
+        color: white;
+        text-transform: uppercase;
+        width: 70vw;
+        outline: none;
+        border: none;
+        font-size: 0.8rem;
+        font-family: "Quicksand";
+        margin-top: 2vh;
+        height: 4vh;
+        text-align: center;
+    }
+    
     .msg {
 
         color: #5B5B5A;
@@ -313,7 +329,7 @@ a {
     /* CALENDRIER */
    
 .calendar-grid {
-  margin:1em auto;
+  margin:auto;
   width:60%;
   height: 50vh;
   display: grid;
@@ -376,5 +392,105 @@ a {
 .calendar-nav__right {
   text-align: right;
 }
+    
+    .popup {
+        width: 79vw;
+        height: 55vh;
+        background: white;
+        margin: auto;
+        position: absolute;
+        z-index: 10;
+        top: 32vh;
+        left: 11vw;
+        transition: all 0.5s ease;
+    }
+    
+    .popup .title {
+        font-size: 1rem;
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .is-invisible {
+        opacity: 0;
+        transform: translateX(-100vh);
+    }
+    
+    .close {
+        position: absolute;
+        right: 3vw;
+        top: 0;
+    }
+    
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        height: 40vh;
+        margin-top: 8vh;
+    }
+    
+    .moods {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: auto;
+    }
+    
+    .mood {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin: 0.5rem;
+    }
+    
+    .happy, .bored, .neutral, .sad, .angry, .stressed {
+        width: 3rem;
+        height: 3rem;
+    
+    }
+    
+    .happy {
+        background: #f8f1a4;
+    }
+    
+    .neutral {
+        background: #f3d9b4;
+    }
+    
+    .bored {
+        background: #ddd1e8;
+    }
+    
+    .stressed {
+        background: #cccbcb;
+    }
+    
+    .sad {
+        background: #dae0f2;
+    }
+    
+    .angry {
+        background: #ef8898;
+    }
+    
+    .popup .txt {
+        font-size: 0.7rem;
+        margin-top: 2vh;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .contour {
+        width: 3rem;
+        height: 3rem;
+        border: 0.2rem solid;
+        border-image: linear-gradient(#F8F2A5, #F18999) 10;
+    }
 /*  FIN CALENDRIER */
 }
