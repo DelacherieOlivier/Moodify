@@ -1,6 +1,6 @@
-@if(request()->ajax())
-    @yield("contenu")
-    @else
+    @guest
+        @yield("contenu")
+    @endguest
     <!DOCTYPE html>
     <html>
         <head>
@@ -13,7 +13,6 @@
         </head>
         <body>
 
-
             @auth
             <div class="flex">
                <div class="logo-home"></div>
@@ -25,17 +24,17 @@
                         @csrf
                     </form>
                 </div>
-            
-            
-           
 
-            
-                
+
+
+
+
+
                     @yield('contenu')
-                
-            
 
-            
+
+
+
             <div class="menu">
                 <div class="home"></div>
                 <div class="settings"></div>
@@ -47,68 +46,66 @@
             <script src="/js/divers.js"></script>
             <script src="/js/moment.js"></script>
             <script>
-            
-let calendarSettings = {
-  date: moment().set('date', 1),
-  today: moment()
-}
 
-const incrementMonth = () => {
-  calendarSettings.date.add(1, 'Months')
-  console.log(`incremented to ${calendarSettings.date}`)
-  displayCalendar(calendarSettings)
-}
+        let calendarSettings = {
+          date: moment().set('date', 1),
+          today: moment()
+        }
 
-const decrementMonth = () => {
-  calendarSettings.date.subtract(1, 'Months')
-  console.log(`decremented to ${calendarSettings.date}`)
-  displayCalendar(calendarSettings)
-}
+        const incrementMonth = () => {
+          calendarSettings.date.add(1, 'Months')
+          console.log(`incremented to ${calendarSettings.date}`)
+          displayCalendar(calendarSettings)
+        }
 
-const displayCalendar = (calendarSettings) => {
+        const decrementMonth = () => {
+          calendarSettings.date.subtract(1, 'Months')
+          console.log(`decremented to ${calendarSettings.date}`)
+          displayCalendar(calendarSettings)
+        }
 
-  const calendar = document.querySelector('.calendar-grid')
-  
-  const calendarTitle = calendarSettings.date.format('MMMM YYYY')
-  const daysInMonth = calendarSettings.date.endOf('Month').date()
-  const firstDay = calendarSettings.date.startOf('Month').isoWeekday()
+        const displayCalendar = (calendarSettings) => {
 
-  calendar.innerHTML = ''
-  calendar.innerHTML = `
-                        <div class="calendar-nav"><a class="left" onClick="decrementMonth()"></a></div>
-                        <div class="calendar-title">${calendarTitle}</div>
-                        <div class="calendar-nav calendar-nav__right"><a onClick="incrementMonth()"> </a></div>
-                        <div class="calendar-dayname">L</div>
-                        <div class="calendar-dayname">M</div>
-                        <div class="calendar-dayname">M</div>
-                        <div class="calendar-dayname">J</div>
-                        <div class="calendar-dayname">V</div>
-                        <div class="calendar-dayname">S</div>
-                        <div class="calendar-dayname">D</div>
-                        `
-  
-  for (let day = 1; day <= daysInMonth; day++) {
-    let calendarDay = document.createElement('div')
-    if (day === 1) {
-      calendarDay.setAttribute('style', `grid-column-start:${firstDay}`)
-      console.log(`firstDay = ${firstDay}`)
-    }
-    calendarDay.classList.add('calendar-day')
-    if (calendarSettings.today.month() == calendarSettings.date.month() && calendarSettings.today.year() == calendarSettings.date.year()) {
-      if (calendarSettings.today.date() == day) {
-        calendarDay.classList.add('current-day')
-      }
-    }
-    calendarDay.innerHTML = day
-    calendar.appendChild(calendarDay)
-  }
+          const calendar = document.querySelector('.calendar-grid')
+
+          const calendarTitle = calendarSettings.date.format('MMMM YYYY')
+          const daysInMonth = calendarSettings.date.endOf('Month').date()
+          const firstDay = calendarSettings.date.startOf('Month').isoWeekday()
+
+          calendar.innerHTML = `
+                                <div class="calendar-nav"><a class="left" onClick="decrementMonth()"></a></div>
+                                <div class="calendar-title">${calendarTitle}</div>
+                                <div class="calendar-nav calendar-nav__right"><a onClick="incrementMonth()"> </a></div>
+                                <div class="calendar-dayname">L</div>
+                                <div class="calendar-dayname">M</div>
+                                <div class="calendar-dayname">M</div>
+                                <div class="calendar-dayname">J</div>
+                                <div class="calendar-dayname">V</div>
+                                <div class="calendar-dayname">S</div>
+                                <div class="calendar-dayname">D</div>
+                                `
+
+          for (let day = 1; day <= daysInMonth; day++) {
+            let calendarDay = document.createElement('div')
+            if (day === 1) {
+              calendarDay.setAttribute('style', `grid-column-start:${firstDay}`)
+              console.log(`firstDay = ${firstDay}`)
+            }
+            calendarDay.classList.add('calendar-day')
+            if (calendarSettings.today.month() == calendarSettings.date.month() && calendarSettings.today.year() == calendarSettings.date.year()) {
+              if (calendarSettings.today.date() == day) {
+                calendarDay.classList.add('current-day')
+              }
+            }
+            calendarDay.innerHTML = day
+            calendar.appendChild(calendarDay)
+          }
 
 
-}
+        }
 
-displayCalendar(calendarSettings);
-</script>
+        displayCalendar(calendarSettings);
+        </script>
         </body>
     </html>
-    @endif
 

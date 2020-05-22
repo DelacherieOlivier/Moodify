@@ -51,3 +51,4 @@
     <div class="msg2">Ou <a href="inscription" class="lien" data-pjax>rejoignez-nous</a> !</div>
 </div>
 @endsection
+
