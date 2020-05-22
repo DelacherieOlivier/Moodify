@@ -4,6 +4,7 @@
 
     @auth
         <div class="home-bck"></div>
+<<<<<<< HEAD
 <div class="quote">LALALAL</div>
 
 <!-- CALENDRIER -->
@@ -52,7 +53,13 @@
 <div class="close" onclick="mood_close()">X</div></div>
 	
 
+=======
+        <div class="quote">LALALAL</div>
+        <!-- CALENDRIER -->
+	    <div class="calendar-grid"></div>
+>>>>>>> 0f896e1d786859d6bca49b4d752ce5deabd61985
     @endauth
+
     @guest
         @include("firstcontroller.connexion")
     @endguest

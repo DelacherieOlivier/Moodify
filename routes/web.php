@@ -21,6 +21,8 @@ Route::get('/inscription', 'FirstController@inscription');
 
 Route::get('/resetmdp', 'FirstController@resetmdp');
 
+Route::get('/resetmdpemail', 'FirstController@showLinkRequestForm');
+
 Route::get('/utilisateur/{id}','FirstController@utilisateur')->where ('id', '[0-9]+');
 
 Route::post('/', 'FirstController@index');
