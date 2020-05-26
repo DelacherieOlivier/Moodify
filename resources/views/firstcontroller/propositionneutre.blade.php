@@ -9,7 +9,7 @@
 	    <div class="title" id='propoJour'></div>
 	    <div class="soulignement"></div>
         <p>
-            Nous allons t aider à faire redescendre tout se stresse regarde nos idées pour que tu puisses décompresser
+            Tu passes peut-être une bonne journée tu te sens sûrement bien mais sans plus
         </p>
         <div class="prop">
             <div class="recipe">
@@ -20,13 +20,13 @@
             </div>
             <div class="list" style="margin-top:3rem">
                 <div>
-                    Faire une petite promenade
+                    Dessiner
                  </div>
                  <div>
-                     Aller discuter avec ses amis
+                     Regarder une serie ou un films
                  </div>
                  <div>
-                     Ecouter de la musique
+                     Faire du sport
                  </div>
             </div>
         </div>

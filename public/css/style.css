@@ -718,6 +718,14 @@ a
 
 
     }
+    .proplist{
+        width: 100%;
+        text-align: center;
+    }
+    .proplist input{
+        width: 100%;
+        border:none;
+    }
 
     .img-pen
     {

@@ -9,7 +9,7 @@
 	    <div class="title" id='propoJour'></div>
 	    <div class="soulignement"></div>
         <p>
-            Nous allons t aider à faire redescendre tout se stresse regarde nos idées pour que tu puisses décompresser
+            Etre énervé n est pas une humeur conseillée regarde cette liste tu pourras sûrement te calmer
         </p>
         <div class="prop">
             <div class="recipe">
@@ -20,13 +20,13 @@
             </div>
             <div class="list" style="margin-top:3rem">
                 <div>
-                    Faire une petite promenade
+                    Visualisez une scène calme tout en fermant les yeux
                  </div>
                  <div>
-                     Aller discuter avec ses amis
+                     Regarder une série Netflix drôle type Lucifer
                  </div>
                  <div>
-                     Ecouter de la musique
+                     Ecouter de la musique qui vous détend
                  </div>
             </div>
         </div>

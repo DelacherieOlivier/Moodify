@@ -29,7 +29,17 @@ Route::get('/utilisateur/{id}','FirstController@utilisateur')->where ('id', '[0-
 
 Route::post('/', 'FirstController@index');
 
-Route::get('/proposition', 'FirstController@proposition');
+Route::get('/proposition', 'FirstController@proposition')->middleware('auth');
+
+Route::get('/propositionhappy', 'FirstController@propositionhappy')->middleware('auth');
+
+Route::get('/propositionsad', 'FirstController@propositionsad')->middleware('auth');
+
+Route::get('/propositionangry', 'FirstController@propositionangry')->middleware('auth');
+
+Route::get('/propositionneutre', 'FirstController@propositionneutre')->middleware('auth');
+
+Route::get('/propositionbored', 'FirstController@propositionbored')->middleware('auth');
 
 Route::post('/utilisateur/update/{id}','FirstController@updateutilisateur')->where ('id', '[0-9]+')->middleware('auth');
 

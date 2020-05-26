@@ -9,7 +9,8 @@
 	    <div class="title" id='propoJour'></div>
 	    <div class="soulignement"></div>
         <p>
-            Nous allons t aider à faire redescendre tout se stresse regarde nos idées pour que tu puisses décompresser
+            Aujourd hui,  tu est heureux. Donc, tu peux faire plusieurs activité avec tes amis ou ta famille afin de partager ta joie
+            et ta bonne humeur autour de toi et pourquoi pas être encore plus heureux ?
         </p>
         <div class="prop">
             <div class="recipe">
@@ -19,15 +20,11 @@
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
-                <div>
-                    Faire une petite promenade
+                @foreach($happy->random(3) as $c)
+                 <div class='proplist'>
+                    <input type="text" name="jour2" value="{{$c->idee}}" id='idee{{$c->id}}'>
                  </div>
-                 <div>
-                     Aller discuter avec ses amis
-                 </div>
-                 <div>
-                     Ecouter de la musique
-                 </div>
+                @endforeach
             </div>
         </div>
     </div>

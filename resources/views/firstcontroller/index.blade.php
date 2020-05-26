@@ -5,7 +5,7 @@
     @auth
         <div class="home-bck"></div>
 
-<div class="quote">LALALAL</div>
+<div class="quote">La bonne humeur est une clef qui ouvre tous les cœurs.</div>
 
 <!-- CALENDRIER -->
 
