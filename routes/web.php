@@ -17,15 +17,19 @@ Route::get('/home', 'FirstController@index')->name('home');
 
 Route::get('/connexion', 'FirstController@connexion');
 
+Route::post('/addmood', 'FirstController@addmood')->middleware('auth');
+
 Route::get('/inscription', 'FirstController@inscription');
 
 Route::get('/resetmdp', 'FirstController@resetmdp');
 
 Route::get('/resetmdpemail', 'FirstController@showLinkRequestForm');
 
-Route::get('/utilisateur/{id}','FirstController@utilisateur')->where ('id', '[0-9]+');
+Route::get('/utilisateur/{id}','FirstController@utilisateur')->where ('id', '[0-9]+')->middleware('auth');
 
 Route::post('/', 'FirstController@index');
+
+Route::get('/proposition', 'FirstController@proposition');
 
 Route::post('/utilisateur/update/{id}','FirstController@updateutilisateur')->where ('id', '[0-9]+')->middleware('auth');
 

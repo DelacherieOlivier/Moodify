@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Calendrier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -16,13 +17,11 @@ class FirstController extends Controller
 
         if(Auth::id()){
             $user=User::findOrFail(Auth::id());
-            return view("firstcontroller.index", [ "utilisateur"=>$user ]);
+            $calendrier=$user->calendrier;
+            return view("firstcontroller.index", [ "utilisateur"=>$user , "calendrier"=>$calendrier]);
         }else{
             return view("firstcontroller.index",  [ "active"=> "accueil" ]);
         }
-
-
-
     }
 
     public function connexion(){
@@ -47,11 +46,18 @@ class FirstController extends Controller
 
         if(Auth::id()){
             $user=User::findOrFail(Auth::id());
-            return view("firstcontroller.utilisateur", ['utilisateurr' => $u, "utilisateur"=>$user]);
+            $calendrier=$user->calendrier;
+            return view("firstcontroller.utilisateur", ['utilisateurr' => $u, "utilisateur"=>$user,"calendrier"=>$calendrier]);
         }else{
-            return view("firstcontroller.utilisateur", ['utilisateurr' => $u,"utilisateur"=>'anonyme']);
+            return view("firstcontroller.utilisateur", ['utilisateurr' => $u,"utilisateur"=>'anonyme',"calendrier"=>$calendrier]);
 
         }
+    }
+
+    public function proposition(){
+            $user=User::findOrFail(Auth::id());
+            $calendrier=$user->calendrier;
+            return view("firstcontroller.proposition", ["utilisateur"=>$user,"calendrier"=>$calendrier] );
     }
 
     public function updateutilisateur(Request $request){
@@ -76,6 +82,17 @@ class FirstController extends Controller
         return back();
     }
 
+   public function addmood(Request $request){
+
+            $c = new Calendrier();
+            $c-> jour = $request->input('jour');
+            $c-> mood = $request->input('mood');
+            $c-> mois = $request->input('mois');
+            $c-> user_id = Auth::id();
+            $c->save();
+            return redirect('/');
+
+    }
 
     public function erreur() {
         $user=User::findOrFail(Auth::id());

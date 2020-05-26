@@ -37,4 +37,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function calendrier(){
+        return $this->hasMany("App\Calendrier", "user_id");
+        //SELECT * FROM calendrier WHERE user_id=?
+        //le ? = $this->>id
+    }
 }

@@ -4,60 +4,66 @@
 
     @auth
         <div class="home-bck"></div>
-<<<<<<< HEAD
+
 <div class="quote">LALALAL</div>
 
 <!-- CALENDRIER -->
 
+      @foreach($calendrier as $c )
+              <input type="hidden" name="jour2" value="{{$c->jour}}" id='jour{{$c->jour}}'>
+              <input type="hidden" name="mood2" value="{{$c->mood}}" id='mood{{$c->mood}}'>
+              <input type="hidden" name="mois2" value="{{$c->mois}}" id='mois{{$c->mois}}'>
+      @endforeach
 
-	  <div class="calendar-grid">
-  
-  </div>
+	  <div class="calendar-grid" ></div>
+
+
 <div class="popup is-invisible"><div class="flex-column">
-    <div class="title">Aujourdhui, je suis...</div>
-    <div class="moods">
-        
-    <div class="mood">
-        <div class="happy" onclick="select('happy')"></div>
-        <div class="txt">Joyeux</div>
-    </div>
-        
-            <div class="mood">
-        <div class="neutral" onclick="select('neutral')"></div>
-        <div class="txt">Neutre</div>
-    </div>
-        
-            <div class="mood">
-        <div class="bored" onclick="select('bored')"></div>
-        <div class="txt">Ennuyé</div>
-    </div>
-        
-            <div class="mood">
-        <div class="stressed" onclick="select('stressed')"></div>
-        <div class="txt">Stressé</div>
-    </div>
-        
-            <div class="mood">
-        <div class="sad" onclick="select('sad')"></div>
-        <div class="txt">Triste</div>
-    </div>
-        
-            <div class="mood">
-        <div class="angry" onclick="select('angry')"></div>
-        <div class="txt">En colère</div>
-    </div>
-    
-    </div>
-    
-    <input class="input-submit2" value="Valider"></div>
-<div class="close" onclick="mood_close()">X</div></div>
-	
+   <div class="title">Aujourdhui, je suis...</div>
+   <form action="/addmood" method="POST" enctype="multipart/form-data" >
+    @csrf
+        <div class="moods">
 
-=======
-        <div class="quote">LALALAL</div>
-        <!-- CALENDRIER -->
-	    <div class="calendar-grid"></div>
->>>>>>> 0f896e1d786859d6bca49b4d752ce5deabd61985
+            <div class="mood">
+              <div class="happy"><input type="radio" id="happy"  value="happy" name="mood"></div>
+              <label for="happy">Joyeux</label>
+            </div>
+
+            <div class="mood">
+              <div class="neutral"><input type="radio" id="neutral"  value="neutral" name="mood"></div>
+              <label for="neutral">Neutre</label>
+            </div>
+
+            <div class="mood">
+              <div class="bored"><input type="radio" id="bored"  value="bored" name="mood"></div>
+              <label for="bored">Ennuyé</label>
+            </div>
+
+            <div class="mood">
+              <div class="stressed"><input type="radio" id="stressed"  value="stressed" name="mood"></div>
+              <label for="stressed">Stressé</label>
+            </div>
+
+            <div class="mood">
+              <div class="sad"><input type="radio" id="sad"  value="sad" name="mood"></div>
+              <label for="sad">Triste</label>
+            </div>
+
+            <div class="mood">
+              <div class="angry"><input type="radio" id="angry"  value="angry" name="mood"></div>
+              <label for="angry">En colère</label>
+            </div>
+            <input type="hidden" name="jour" value="" id='jour'>
+            <input type="hidden" name="mois" value="" id='mois'>
+            <input type="submit" class="input-submit2" value="Valider" data-pjax>
+        </div>
+    </form>
+
+
+    </div>
+<div class="close" onclick="mood_close()">X</div></div>
+
+
     @endauth
 
     @guest
@@ -65,3 +71,4 @@
     @endguest
 
 @endsection
+

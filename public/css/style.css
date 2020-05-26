@@ -1,13 +1,18 @@
-@font-face {
+@font-face
+{
     font-family: "Quicksand";
     src: url("../fonts/QuicksandBook.otf");
 }
 
-a {
+a
+{
     text-decoration: none;
 }
-@media screen and (max-width: 1000px) {
-    body {
+
+@media screen and (max-width: 1000px)
+{
+    body
+    {
         background: #EFEFEF;
         margin: 0;
         padding: 0;
@@ -17,8 +22,8 @@ a {
     }
 
     /* CONNEXION, INSCRIPTION & MDP OUBLIE */
-    .degrade-bck-1 {
-
+    .degrade-bck-1
+    {
         background-image: url('../img/degrade1.png');
         position: absolute;
         right: 0;
@@ -29,8 +34,8 @@ a {
         background-repeat: no-repeat;
     }
 
-    .degrade-bck-2 {
-
+    .degrade-bck-2
+    {
         background-image: url('../img/degrade2.png');
         position: absolute;
         left: 0;
@@ -41,8 +46,8 @@ a {
         background-repeat: no-repeat;
     }
 
-    .content {
-
+    .content
+    {
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -52,8 +57,8 @@ a {
         margin: auto;
     }
 
-    .logo {
-
+    .logo
+    {
         background-image: url('../img/logo.svg');
         width: 45vw;
         height: 5vh;
@@ -61,39 +66,40 @@ a {
         background-repeat: no-repeat;
         animation-duration: 1s;
         animation-name: slidein;
-
     }
 
-    @keyframes slidein {
-
-        from {
+    @keyframes slidein
+    {
+        from
+        {
             transform: translateX(-100vh);
             opacity:0;
         }
 
-
-        to {
+        to
+        {
             transform: translateX(0vh);
             opacity:1;
         }
     }
 
-    @keyframes slidein2 {
-
-        from {
+    @keyframes slidein2
+    {
+        from
+        {
             transform: translateX(100vh);
             opacity:0;
         }
 
-
-        to {
+        to
+        {
             transform: translateX(0vh);
             opacity:1;
         }
     }
 
-    .register {
-
+    .register
+    {
         color: black;
         font-size: 1.2rem;
         text-transform: uppercase;
@@ -103,12 +109,10 @@ a {
         animation-fill-mode: forwards;
         animation-delay: 0.5s;
         opacity: 0;
-
-
     }
 
-    .input-text {
-
+    .input-text
+    {
         background: #D1D1CD;
         border-radius: 1rem;
         color: #5B5B5A;
@@ -129,20 +133,21 @@ a {
         opacity: 0;
     }
 
-    @keyframes opacity {
-
-        from {
+    @keyframes opacity
+    {
+        from
+        {
             opacity:0;
         }
 
-
-        to {
+        to
+        {
             opacity:1;
         }
     }
 
-    .input-submit {
-
+    .input-submit
+    {
         background-image: linear-gradient(to right, #F8F2A5, #F18999);
         border-radius: 1rem;
         color: white;
@@ -152,7 +157,6 @@ a {
         border: none;
         font-size: 0.8rem;
         font-family: "Quicksand";
-
         margin-top: 2vh;
         height: 4vh;
         text-align: center;
@@ -163,8 +167,8 @@ a {
         opacity: 0;
     }
 
-        .input-submit2 {
-
+    .input-submit2
+    {
         background-image: linear-gradient(to right, #F8F2A5, #F18999);
         border-radius: 1rem;
         color: white;
@@ -174,13 +178,14 @@ a {
         border: none;
         font-size: 0.8rem;
         font-family: "Quicksand";
-        margin-top: 2vh;
+        margin-top: 6vh;
         height: 4vh;
         text-align: center;
+        margin: auto;
     }
-    
-    .msg {
 
+    .msg
+    {
         color: #5B5B5A;
         margin-top: 1vh;
         font-size: 0.8rem;
@@ -189,10 +194,10 @@ a {
         animation-fill-mode: forwards;
         animation-delay: 1.5s;
         opacity: 0;
-
     }
 
-    .msg2 {
+    .msg2
+    {
         font-size: 1rem;
         margin-top: 3vh;
         animation-name: opacity;
@@ -201,7 +206,9 @@ a {
         animation-delay: 1.5s;
         opacity: 0;
     }
-    .my_checkbox {
+
+    .my_checkbox
+    {
         margin-bottom: 2vh;
         animation-name: opacity;
         animation-duration: 1s;
@@ -210,27 +217,27 @@ a {
         opacity: 0;
     }
 
-    input[type='checkbox'] {
+    input[type='checkbox']
+    {
         border: none;
         border-radius: 0.5rem;
         outline: none;
-
     }
 
-    .lien {
+    .lien
+    {
         color: black;
         font-weight: bold;
     }
 
-    .top {
+    .top
+    {
         margin-top: 2vh;
     }
 
-
     /* PAGE D'ACCUEIL */
-
-    .logo-home {
-
+    .logo-home
+    {
         background-image: url('../img/logo.svg');
         width: 45vw;
         height: 5vh;
@@ -239,37 +246,41 @@ a {
         animation-duration: 1s;
         animation-name: movebottom;
         animation-fill-mode: forwards;
-        
         margin: auto;
         opacity: 0;
-
     }
 
-    @keyframes movebottom {
-
-        from {
+    @keyframes movebottom
+    {
+        from
+        {
             transform: translateY(-100vh);
             opacity:0;
         }
 
-
-        to {
+        to
+        {
             transform: translateY(0vh);
             opacity:1;
         }
     }
 
-    .flex {
+    .flex
+    {
         display: flex;
         position: relative;
         top: 1vh;
     }
 
-    .logout {
+    .logout
+    {
         width: 5vw;
+        animation-duration: 1s;
+        animation-name: movebottom;
     }
 
-    .home-bck {
+    .home-bck
+    {
         background-image: url(../img/bck_home.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -279,7 +290,8 @@ a {
         bottom: 0;
     }
 
-    .menu {
+    .menu
+    {
         background: #EFEFEF;
         width: 100vw;
         height: 7vh;
@@ -290,7 +302,8 @@ a {
         align-items: center;
     }
 
-    .home {
+    .home
+    {
         background-image: url(../img/home.svg);
         background-size: contain;
         background-position: center;
@@ -298,8 +311,9 @@ a {
         width: 50vw;
         height: 2.5rem;
     }
-    
-    .settings {
+
+    .settings
+    {
         background-image: url(../img/settings.svg);
         background-size: contain;
         background-position: center;
@@ -307,16 +321,24 @@ a {
         width: 50vw;
         height: 2.5rem;
     }
-    .quote {
+
+    .quote
+    {
         color: white;
         font-size: 0.8rem;
         position: relative;
         margin-top: 13vh;
         margin-left: 10vw;
         width: 65vw;
+        animation-duration: 1s;
+        animation-name: slidein2;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
     }
-    
-    .logout {
+
+    .logout
+    {
         background-image: url(../img/logout.svg);
         background-size: contain;
         background-position: center;
@@ -327,73 +349,87 @@ a {
     }
 
     /* CALENDRIER */
-   
-.calendar-grid {
-  margin:auto;
-  width:60%;
-  height: 50vh;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 3em 2em;
-  grid-auto-rows: 1fr;
-    position: relative;
-    top: 12vh;
-    z-index:6;
-}
+    .calendar-grid
+    {
+        margin:auto;
+        width:60%;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 3em 2em;
+        grid-auto-rows: 1fr;
+        position: relative;
+        top: 12vh;
+        z-index:6;
+        animation-duration: 1s;
+        animation-name: slidein;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+    }
 
-.calendar-day {
-  padding:.4em;
-    width: 50%;
-    height:60%;
-  background: #E8E8E8;
-}
+    .calendar-day
+    {
+        padding:.4em;
+        width: 50%;
+        height:60%;
+        background: #E8E8E8;
+    }
 
-.current-day {
-  background:lightskyblue;
-}
+    .current-day
+    {
+        background:lightskyblue;
+    }
 
-.first-day {
-  grid-column-start: 4;
-}
+    .first-day
+    {
+        grid-column-start: 4;
+    }
 
-.calendar-dayname {
-  padding:.3em;
-  text-align:center;
-  color: black;
-  font-weight: bold;
-}
+    .calendar-dayname
+    {
+        padding:.3em;
+        text-align:center;
+        color: black;
+        font-weight: bold;
+    }
 
-.calendar-title {
-  text-align:center;
-  grid-column: 2 / -2;
-  font-size: 1.3em;
-  display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
+    .calendar-title
+    {
+        text-align:center;
+        grid-column: 2 / -2;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
 
-.calendar-nav a {
-     background-image: url(../img/arrow.svg);
+    .calendar-nav a
+    {
+        background-image: url(../img/arrow.svg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-  display:block;
-  width:100%;
-  height:100%;
-  font-size: 2em;
-  cursor: pointer;
-    
-}
+        display:block;
+        width:100%;
+        height:100%;
+        font-size: 2em;
+        cursor: pointer;
+    }
 
-    .left {
+    .left
+    {
         transform: rotate(180deg);
     }
-.calendar-nav__right {
-  text-align: right;
-}
-    
-    .popup {
+
+    .calendar-nav__right
+    {
+        text-align: right;
+    }
+
+    .popup
+    {
         width: 79vw;
         height: 55vh;
         background: white;
@@ -404,27 +440,31 @@ a {
         left: 11vw;
         transition: all 0.5s ease;
     }
-    
-    .popup .title {
+
+    .popup .title
+    {
         font-size: 1rem;
         width: 70%;
         margin: auto;
         text-align: center;
         text-transform: uppercase;
     }
-    
-    .is-invisible {
+
+    .is-invisible
+    {
         opacity: 0;
         transform: translateX(-100vh);
     }
-    
-    .close {
+
+    .close
+    {
         position: absolute;
         right: 3vw;
         top: 0;
     }
-    
-    .flex-column {
+
+    .flex-column
+    {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -433,64 +473,288 @@ a {
         height: 40vh;
         margin-top: 8vh;
     }
-    
-    .moods {
+
+    .moods
+    {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         width: 70%;
         margin: auto;
     }
-    
-    .mood {
+
+    .mood
+    {
         display: flex;
         flex-direction: column;
         width: 25%;
         margin: 0.5rem;
     }
-    
-    .happy, .bored, .neutral, .sad, .angry, .stressed {
+
+    .happy, .bored, .neutral, .sad, .angry, .stressed
+    {
         width: 3rem;
         height: 3rem;
-    
+        border: none;
     }
-    
-    .happy {
+
+    .happy
+    {
         background: #f8f1a4;
     }
-    
-    .neutral {
+
+    .neutral
+    {
         background: #f3d9b4;
     }
-    
-    .bored {
+
+    .bored
+    {
         background: #ddd1e8;
     }
-    
-    .stressed {
+
+    .stressed
+    {
         background: #cccbcb;
     }
-    
-    .sad {
+
+    .sad
+    {
         background: #dae0f2;
     }
-    
-    .angry {
+
+    .angry
+    {
         background: #ef8898;
     }
-    
-    .popup .txt {
+
+    .popup .txt
+    {
         font-size: 0.7rem;
         margin-top: 2vh;
         text-align: center;
         text-transform: uppercase;
     }
-    
-    .contour {
+
+    .contour
+    {
         width: 3rem;
         height: 3rem;
-        border: 0.2rem solid;
+        border: 1rem solid;
         border-image: linear-gradient(#F8F2A5, #F18999) 10;
     }
-/*  FIN CALENDRIER */
+
+    /*  FIN CALENDRIER */
+    /* PROPOSITION D'ACTIVITES */
+    .proposition .title
+    {
+        animation-duration: 1s;
+        animation-name: slidein;
+        font-size: 1rem;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .soulignement
+    {
+        width: 40vw;
+        height: 0.2rem;
+        background: linear-gradient(to right, #F8F2A5, #F18999);
+        margin: auto;
+        margin-top: 2vh;
+        animation-duration: 1s;
+        animation-name: slidein2;
+    }
+
+    .proposition
+    {
+        position: relative;
+        z-index: 10;
+        top: 25vh;
+        width: 70vw;
+        margin: auto;
+    }
+
+    .proposition p
+    {
+        font-size: 0.8rem;
+        margin-top: 3vh;
+        animation-duration: 1s;
+        animation-name: opacity;
+        animation-delay: 1s;
+        opacity:0;
+        animation-fill-mode: forwards;
+    }
+
+    .prop
+    {
+        font-size: 0.8rem;
+        margin-top: 4vh;
+        animation-duration: 1s;
+        animation-name: opacity;
+        animation-delay: 1s;
+        opacity:0;
+        animation-fill-mode: forwards;
+    }
+
+    .list
+    {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .list div
+    {
+        margin: 0.2rem;
+    }
+
+    .list div:nth-child(1)
+    {
+        margin-top: 1vh;
+    }
+
+    .home-bck2
+    {
+        background-image: url(../img/bck_home2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 90vh;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .netflix .img
+    {
+        background-image: url(../img/netflix.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 0.6rem;
+        height: 0.8rem;
+        margin-right: 2vw;
+    }
+
+    .netflix, .recipe
+    {
+        display: flex;
+    }
+
+    .recipe .img
+    {
+        background-image: url(../img/cupcake.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-right: 2vw;
+    }
+
+    /* PARAMETRES */
+    .home-bck3
+    {
+        background-image: url(../img/bck_home3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 90vh;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .user
+    {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        animation-name: slidein;
+        animation-duration: 1s;
+    }
+
+    .username
+    {
+        color: white;
+        position: relative;
+        z-index: 5;
+        margin-top: 15vh;
+        width: 100%;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .settings-2
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: 100vw;
+        margin-top: 5vh;
+        animation-name: slidein2;
+        animation-duration: 1s;
+    }
+
+    .input-settings
+    {
+        background: #EFEFEF;
+        width: 70vw;
+        height: 4vh;
+        position: relative;
+        z-index: 5;
+        border-radius: 1rem;
+        margin: 0.3rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        padding: 0.2rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    .img-pen
+    {
+        background-image: url(../img/pen.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 1rem;
+        height: 1rem;
+        transition: all 1s ease;
+    }
+
+    .img-pen:hover
+    {
+        transform: rotate(1turn);
+    }
+
+    .white
+    {
+        background-image: url('../img/pen-white.svg');
+    }
+
+    .title-settings {
+        position: relative;
+        z-index: 5;
+        color: white;
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .form-settings{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .margintop
+    {
+        margin-top: 5vh;
+    }
 }

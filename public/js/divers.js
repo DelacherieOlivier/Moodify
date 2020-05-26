@@ -23,62 +23,14 @@ $(document).ready(function () {
 });
 
 
- function mood() {
+
+ function mood(day,mois) {
     document.querySelector('.popup').classList.remove('is-invisible');
+    document.getElementById('jour').value= day ;
+    document.getElementById('mois').value= mois+1 ;
 }
 
 function mood_close() {
     document.querySelector('.popup').classList.add('is-invisible');
 }
 
-function select(x) {
-    document.querySelector('.'+x).classList.add('contour');
-
-    if(x == "happy") {
-        document.querySelector('.bored').classList.remove('contour');
-        document.querySelector('.sad').classList.remove('contour');
-        document.querySelector('.neutral').classList.remove('contour');
-        document.querySelector('.angry').classList.remove('contour');
-        document.querySelector('.stressed').classList.remove('contour');
-    }
-    
-        if(x == "sad") {
-        document.querySelector('.bored').classList.remove('contour');
-        document.querySelector('.happy').classList.remove('contour');
-        document.querySelector('.neutral').classList.remove('contour');
-        document.querySelector('.angry').classList.remove('contour');
-        document.querySelector('.stressed').classList.remove('contour');
-    }
-    
-        if(x == "bored") {
-        document.querySelector('.happy').classList.remove('contour');
-        document.querySelector('.sad').classList.remove('contour');
-        document.querySelector('.neutral').classList.remove('contour');
-        document.querySelector('.angry').classList.remove('contour');
-        document.querySelector('.stressed').classList.remove('contour');
-    }
-    
-        if(x == "stressed") {
-        document.querySelector('.bored').classList.remove('contour');
-        document.querySelector('.sad').classList.remove('contour');
-        document.querySelector('.neutral').classList.remove('contour');
-        document.querySelector('.angry').classList.remove('contour');
-        document.querySelector('.happy').classList.remove('contour');
-    }
-    
-        if(x == "angry") {
-        document.querySelector('.bored').classList.remove('contour');
-        document.querySelector('.sad').classList.remove('contour');
-        document.querySelector('.neutral').classList.remove('contour');
-        document.querySelector('.happy').classList.remove('contour');
-        document.querySelector('.stressed').classList.remove('contour');
-    }
-    
-        if(x == "neutral") {
-        document.querySelector('.bored').classList.remove('contour');
-        document.querySelector('.sad').classList.remove('contour');
-        document.querySelector('.happy').classList.remove('contour');
-        document.querySelector('.angry').classList.remove('contour');
-        document.querySelector('.stressed').classList.remove('contour');
-    }
-}
