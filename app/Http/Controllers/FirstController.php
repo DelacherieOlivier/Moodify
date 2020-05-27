@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Calendrier;
 use App\Happy;
+use App\Angry;
+use App\Bored;
+use App\Stressed;
+use App\Sad;
+use App\Neutre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -59,7 +64,8 @@ class FirstController extends Controller
     public function proposition(){
             $user=User::findOrFail(Auth::id());
             $calendrier=$user->calendrier;
-            return view("firstcontroller.proposition", ["utilisateur"=>$user,"calendrier"=>$calendrier] );
+            $stressed = Stressed::all();
+            return view("firstcontroller.proposition", ["utilisateur"=>$user,"calendrier"=>$calendrier,"stressed"=>$stressed] );
     }
     public function propositionhappy(){
             $user=User::findOrFail(Auth::id());
@@ -70,22 +76,26 @@ class FirstController extends Controller
     public function propositionsad(){
             $user=User::findOrFail(Auth::id());
             $calendrier=$user->calendrier;
-            return view("firstcontroller.propositionsad", ["utilisateur"=>$user,"calendrier"=>$calendrier] );
+            $sad = Sad::all();
+            return view("firstcontroller.propositionsad", ["utilisateur"=>$user,"calendrier"=>$calendrier,"sad"=>$sad] );
     }
     public function propositionangry(){
             $user=User::findOrFail(Auth::id());
             $calendrier=$user->calendrier;
-            return view("firstcontroller.propositionangry", ["utilisateur"=>$user,"calendrier"=>$calendrier] );
+            $angry = Angry::all();
+            return view("firstcontroller.propositionangry", ["utilisateur"=>$user,"calendrier"=>$calendrier,"angry"=>$angry] );
     }
     public function propositionneutre(){
             $user=User::findOrFail(Auth::id());
             $calendrier=$user->calendrier;
-            return view("firstcontroller.propositionneutre", ["utilisateur"=>$user,"calendrier"=>$calendrier] );
+            $neutre = Neutre::all();
+            return view("firstcontroller.propositionneutre", ["utilisateur"=>$user,"calendrier"=>$calendrier,"neutre"=>$neutre] );
     }
     public function propositionbored(){
              $user=User::findOrFail(Auth::id());
              $calendrier=$user->calendrier;
-             return view("firstcontroller.propositionbored", ["utilisateur"=>$user,"calendrier"=>$calendrier] );
+             $bored = Bored::all();
+             return view("firstcontroller.propositionbored", ["utilisateur"=>$user,"calendrier"=>$calendrier ,"bored"=>$bored] );
     }
     public function updateutilisateur(Request $request){
         $request->validate([
@@ -151,7 +161,8 @@ class FirstController extends Controller
 
     public function erreur() {
         $user=User::findOrFail(Auth::id());
-        return view('errors.404', ["utilisateur"=>$user]);
+        $calendrier=$user->calendrier;
+        return view('errors.404', ["utilisateur"=>$user,"calendrier"=>$calendrier]);
 
     }
 }

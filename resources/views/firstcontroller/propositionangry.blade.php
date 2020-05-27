@@ -19,15 +19,11 @@
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
-                <div>
-                    Visualisez une scène calme tout en fermant les yeux
-                 </div>
-                 <div>
-                     Regarder une série Netflix drôle type Lucifer
-                 </div>
-                 <div>
-                     Ecouter de la musique qui vous détend
-                 </div>
+                @foreach($angry->random(3) as $c)
+                     <div class='proplist'>
+                        {{$c->idee}}
+                     </div>
+                @endforeach
             </div>
         </div>
     </div>

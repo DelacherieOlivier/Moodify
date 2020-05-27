@@ -19,15 +19,11 @@
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
-                <div>
-                    Socialiser : voyez vos amis ou faites de nouvelles rencontres
-                 </div>
-                 <div>
-                     Adopter un animal domestique type chien et chat
-                 </div>
-                 <div>
-                     Méditer et faites le point sur vous même pour repartir du bon pied
-                 </div>
+                @foreach($sad->random(3) as $c)
+                     <div class='proplist'>
+                        {{$c->idee}}
+                     </div>
+                @endforeach
             </div>
         </div>
     </div>

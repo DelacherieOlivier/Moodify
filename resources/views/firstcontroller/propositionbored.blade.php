@@ -19,15 +19,11 @@
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
-                <div>
-                    Tu peut jouer a des jeux vidéo
-                 </div>
-                 <div>
-                     Sortir faire des activitées a plusieur
-                 </div>
-                 <div>
-                     Regarder une série ou un film
-                 </div>
+                @foreach($bored->random(3) as $c)
+                     <div class='proplist'>
+                        {{$c->idee}}
+                     </div>
+                @endforeach
             </div>
         </div>
     </div>

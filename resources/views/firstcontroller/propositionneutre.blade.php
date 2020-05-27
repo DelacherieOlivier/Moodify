@@ -19,15 +19,11 @@
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
-                <div>
-                    Dessiner
-                 </div>
-                 <div>
-                     Regarder une serie ou un films
-                 </div>
-                 <div>
-                     Faire du sport
-                 </div>
+                @foreach($neutre->random(3) as $c)
+                     <div class='proplist'>
+                        {{$c->idee}}
+                     </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -19,15 +19,11 @@
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
-                <div>
-                    Faire une petite promenade
-                 </div>
-                 <div>
-                     Aller discuter avec ses amis
-                 </div>
-                 <div>
-                     Ecouter de la musique
-                 </div>
+                @foreach($stressed->random(3) as $c)
+                     <div class='proplist'>
+                        {{$c->idee}}
+                     </div>
+                @endforeach
             </div>
         </div>
     </div>

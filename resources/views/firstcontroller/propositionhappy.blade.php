@@ -22,7 +22,7 @@
             <div class="list" style="margin-top:3rem">
                 @foreach($happy->random(3) as $c)
                  <div class='proplist'>
-                    <input type="text" name="jour2" value="{{$c->idee}}" id='idee{{$c->id}}'>
+                    {{$c->idee}}
                  </div>
                 @endforeach
             </div>
