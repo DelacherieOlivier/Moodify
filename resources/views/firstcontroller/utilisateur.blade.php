@@ -7,7 +7,7 @@
     <div class="username"><div>{{$utilisateurr->name}}</div></div></div>
 
     <div class="settings-2">
-        <div class="title-settings">A propos de vous</div>
+        <div class="title-settings">About you</div>
 
 
         <div>
@@ -17,9 +17,9 @@
                         <div class="user">
                             <form action="/utilisateur/update/{{Auth::id()}}" method="POST"  enctype="multipart/form-data" data-pjax class="form-settings">
                                 @csrf
-                                <input type="email" name="email" placeholder="Votre nouvelle Adresse mail..." class="input-text input_form form" value="{{$utilisateurr->email}}">
-                                <input type="password" name="password" placeholder="Votre nouveau mot de passe..." class="input-text input_form form">
-                                <input type="submit" value="Valider" class="input-submit">
+                                <input type="email" name="email" placeholder="Your new adress mail..." class="input-text color input_form form" value="{{$utilisateurr->email}}">
+                                <input type="password" name="password" placeholder="Your new password..." class="input-text color input_form form">
+                                <input type="submit" value="validate" class="input-submit">
                             </form>
                         </div>
                     @endif

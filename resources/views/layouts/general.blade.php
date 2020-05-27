@@ -78,13 +78,13 @@
                                 <div class="calendar-nav"><a class="left" onClick="decrementMonth()"></a></div>
                                 <div class="calendar-title">${calendarTitle}</div>
                                 <div class="calendar-nav calendar-nav__right"><a onClick="incrementMonth()"> </a></div>
-                                <div class="calendar-dayname">L</div>
                                 <div class="calendar-dayname">M</div>
-                                <div class="calendar-dayname">M</div>
-                                <div class="calendar-dayname">J</div>
-                                <div class="calendar-dayname">V</div>
+                                <div class="calendar-dayname">T</div>
+                                <div class="calendar-dayname">W</div>
+                                <div class="calendar-dayname">T</div>
+                                <div class="calendar-dayname">F</div>
                                 <div class="calendar-dayname">S</div>
-                                <div class="calendar-dayname">D</div>
+                                <div class="calendar-dayname">S</div>
                                 `;
 
             for (let day = 1; day <= daysInMonth; day++) {

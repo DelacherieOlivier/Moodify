@@ -5,7 +5,7 @@
     @auth
         <div class="home-bck"></div>
 
-<div class="quote">La bonne humeur est une clef qui ouvre tous les cœurs.</div>
+<div class="quote">Good humor is a key that opens all hearts.</div>
 
 <!-- CALENDRIER -->
 
@@ -19,43 +19,43 @@
 
 
 <div class="popup is-invisible"><div class="flex-column">
-   <div class="title">Aujourdhui, je suis...</div>
+   <div class="title">Today, I am...</div>
    <form action="/addmood" method="POST" enctype="multipart/form-data" >
     @csrf
         <div class="moods">
 
             <div class="mood">
               <div class="happy"><input type="radio" id="happy"  value="happy" name="mood"></div>
-              <label for="happy">Joyeux</label>
+              <label for="happy">Happy</label>
             </div>
 
             <div class="mood">
               <div class="neutral"><input type="radio" id="neutral"  value="neutral" name="mood"></div>
-              <label for="neutral">Neutre</label>
+              <label for="neutral">Neutral</label>
             </div>
 
             <div class="mood">
               <div class="bored"><input type="radio" id="bored"  value="bored" name="mood"></div>
-              <label for="bored">Ennuyé</label>
+              <label for="bored">Bored</label>
             </div>
 
             <div class="mood">
               <div class="stressed"><input type="radio" id="stressed"  value="stressed" name="mood"></div>
-              <label for="stressed">Stressé</label>
+              <label for="stressed">Stress</label>
             </div>
 
             <div class="mood">
               <div class="sad"><input type="radio" id="sad"  value="sad" name="mood"></div>
-              <label for="sad">Triste</label>
+              <label for="sad">Sad</label>
             </div>
 
             <div class="mood">
               <div class="angry"><input type="radio" id="angry"  value="angry" name="mood"></div>
-              <label for="angry">En colère</label>
+              <label for="angry">Angry</label>
             </div>
             <input type="hidden" name="jour" value="" id='jour'>
             <input type="hidden" name="mois" value="" id='mois'>
-            <input type="submit" class="input-submit2" value="Valider" data-pjax>
+            <input type="submit" class="input-submit2" value="Validate" data-pjax>
         </div>
     </form>
 

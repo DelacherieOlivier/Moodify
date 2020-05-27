@@ -501,31 +501,43 @@ a
     .happy
     {
         background: #f8f1a4;
+        justify-content: center;
+        display: flex;
     }
 
     .neutral
     {
         background: #f3d9b4;
+        justify-content: center;
+        display: flex;
     }
 
     .bored
     {
         background: #ddd1e8;
+        justify-content: center;
+        display: flex;
     }
 
     .stressed
     {
         background: #cccbcb;
+        justify-content: center;
+        display: flex;
     }
 
     .sad
     {
         background: #dae0f2;
+        justify-content: center;
+        display: flex;
     }
 
     .angry
     {
         background: #ef8898;
+        justify-content: center;
+        display: flex;
     }
 
     .popup .txt
@@ -759,5 +771,8 @@ a
     .margintop
     {
         margin-top: 5vh;
+    }
+    .color{
+        background: #efefef;
     }
 }

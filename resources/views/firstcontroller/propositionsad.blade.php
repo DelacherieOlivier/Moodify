@@ -9,13 +9,13 @@
 	    <div class="title" id='propoJour'></div>
 	    <div class="soulignement"></div>
         <p>
-            Il est temps pour toi de penser à autre chose essaye de jeter un petit coup d'oeil à notre liste cela pourra sûrement t'aider
+            It's time for you to think about something else, try taking a look at our list it will surely help you
         </p>
         <div class="prop">
             <div class="recipe">
                 <div class="img"></div>
                 <div>
-                    Jette un oeil à nos idées
+                    Take a look at our ideas
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
@@ -34,7 +34,7 @@
     @endguest
     <script>
     let date1 = new Date();
-        let dateLocale = date1.toLocaleString('fr-FR',{
+        let dateLocale = date1.toLocaleString('en-EN',{
             weekday: 'long',
             year: 'numeric',
             month: 'long',

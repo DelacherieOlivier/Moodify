@@ -9,13 +9,13 @@
 	    <div class="title" id='propoJour'></div>
 	    <div class="soulignement"></div>
         <p>
-            Tu passes peut-être une bonne journée tu te sens sûrement bien mais sans plus
+            You may be having a good day, you will surely feel good but nothing more
         </p>
         <div class="prop">
             <div class="recipe">
                 <div class="img"></div>
                 <div>
-                    Jette un oeil à nos idées
+                    Take a look at our ideas
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
@@ -34,7 +34,7 @@
     @endguest
     <script>
     let date1 = new Date();
-        let dateLocale = date1.toLocaleString('fr-FR',{
+        let dateLocale = date1.toLocaleString('en-EN',{
             weekday: 'long',
             year: 'numeric',
             month: 'long',

@@ -5,17 +5,17 @@
 <div id="formconnexion" class="content">
 
     <div class="logo top"></div>
-    <div class="register">S'inscrire</div>
+    <div class="register">Register</div>
         <form method="POST" action="{{ route('register') }}">
         @csrf
             <input id="name" type="text" class="input-text @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name"  placeholder="Pseudo">
 
-            <input id="email" type="email" class="input-text @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Adresse mail">
+            <input id="email" type="email" class="input-text @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="mail address">
 
             <div class="mdp">
-                <input id="password" type="password" class="input-text @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Mot de passe">
+                <input id="password" type="password" class="input-text @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="password">
 
-                <input id="password-confirm" type="password" class="input-text" name="password_confirmation" required autocomplete="new-password" placeholder="Confirmation mot de passe">
+                <input id="password-confirm" type="password" class="input-text" name="password_confirmation" required autocomplete="new-password" placeholder="Password confirmation">
             </div>
 
             @error('name')
@@ -35,10 +35,10 @@
             @enderror
 
             <button type="submit" class="input-submit">
-                {{ __('Inscription') }}
+                {{ __('register') }}
             </button>
         </form>
-        <div class="msg2">Ou <a href="connexion" class="lien" data-pjax>connectez-vous</a> !</div>
+        <div class="msg2">Or <a href="connexion" class="lien" data-pjax>log in</a> !</div>
     </div>
 @endsection
 

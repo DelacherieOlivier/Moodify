@@ -9,14 +9,14 @@
 	    <div class="title" id='propoJour'></div>
 	    <div class="soulignement"></div>
         <p>
-            Aujourd hui,  tu est heureux. Donc, tu peux faire plusieurs activité avec tes amis ou ta famille afin de partager ta joie
-            et ta bonne humeur autour de toi et pourquoi pas être encore plus heureux ?
+            Today you are happy. So you can do several activities with your friends or family to share your joy
+            and your good mood around you and why not be even happier?
         </p>
         <div class="prop">
             <div class="recipe">
                 <div class="img"></div>
                 <div>
-                    Jette un oeil à nos idées
+                    Take a look at our ideas
                 </div>
             </div>
             <div class="list" style="margin-top:3rem">
@@ -35,7 +35,7 @@
     @endguest
     <script>
     let date1 = new Date();
-        let dateLocale = date1.toLocaleString('fr-FR',{
+        let dateLocale = date1.toLocaleString('en-EN',{
             weekday: 'long',
             year: 'numeric',
             month: 'long',
